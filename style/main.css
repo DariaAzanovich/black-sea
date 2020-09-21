@@ -11,6 +11,7 @@ body {
 .wrap {
   display: flex;
   flex-direction: column;
+
   max-width: 1280px;
   min-width: 400px;
 
@@ -31,7 +32,7 @@ body {
  .footer
  {
      display: flex;
-     /* flex-direction: column; */
+     flex-direction: column;
      justify-content: center;
      align-items: center;
  }
@@ -41,12 +42,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* flex: 1; */
 
   width: 80%;
   margin: 0 10%;
 
-  padding: 3rem 0;
+  padding: 5.5rem 0;
 }
 
 .header .container,
@@ -68,10 +68,14 @@ body {
 .header > .container {
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .header__logo {
   font-family: 'Cherry Swash', cursive;
+  font-weight: 400;
+
+  cursor: pointer;
 }
 
 .header__nav {
@@ -79,33 +83,42 @@ body {
 }
 
 .header__link {
-  color: #ffffff;
+  position: relative;
+  margin: 0 1rem;
+
+  font-stretch: ultra-condensed;
+
   text-decoration: none;
+  text-transform: uppercase;
+
+  color: #ffffff;
 }
 
 .header__nav-icon {
   display: none;
   position: relative;
-  /* display: flex; */
   flex-direction: column;
   width: 30px;
   height: 5px;
 
   background-color: #ffffff;
+
+  cursor: pointer;
 }
 
 .header__link + .header__link::before {
   content: '';
-  /* width: 3px;
-  height: 10px; */
+  position: absolute;
+  width: 1.2rem;
+  height: 0.11rem;
 
-  margin: 0 10px;
+  transform: rotate(-65deg);
+  top: 0.7rem;
+  left: -2rem;
 
-  padding: 0 2px;
-
-  transform: skew(20deg);
 	background: #ffffff;
 }
+
 
 /* ------------------------------ Promo styles -------------------------------*/
 
@@ -123,11 +136,9 @@ body {
   padding-bottom: 2.8rem;
   margin: 0;
   max-width: 517px;
-  /* padding: 50px; */
 }
 
 .promo__btn {
-  max-width: 243px;
   padding: 1% 3%;
   margin-bottom: 7.5rem;
 
@@ -138,6 +149,8 @@ body {
 
   background-color: transparent;
   color: #ffffff;
+
+  cursor: pointer;
 }
 
 .promo__list {
@@ -171,17 +184,13 @@ body {
   color: #000000;
 }
 
-/* .main h3 {
-  max-width: calc(100% * 629 / 1280);
-} */
-
 .main-list__icons {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.main-icon {      /* Что делать с размерами картинок и bg?*/
+.main-icon {
   height: 56px;
   width: 56px;
 
@@ -209,12 +218,11 @@ body {
   position: relative;
 
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
 
-  height: 135px;
-  width: 135px;
+  height: 8.4rem;
+  width: 8.4rem;
 
   border-radius: 50%;
 
@@ -223,20 +231,31 @@ body {
 }
 
 .testimonial__avatar {
+  position: relative;
   display: flex;
 }
 
-.testimonial__dhavan::before {
+.testimonial__avatar::before {
   content: 'Dhavan';
-  position: relative;
-  font-size: 16px;
+  position: absolute;
+  left: 10rem;
+
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
-.testimonial__dhavan::after {
-  content: '\201D';
-  position: relative;
-  font-size: 78px;
+.testimonial__avatar::after {
+  content: open-quote;
+  position: absolute;
+  left: 9.5rem;
+  top: -8rem;
+
+  font-size: 15rem;
   font-weight: bold;
+
+  transform: rotate(180deg);
+
   opacity: 0.2;
 }
 
@@ -257,8 +276,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-/*
-  padding: 10%; */
+
   margin: 45px;
 
   border: 100px solid #ffffff;
@@ -300,12 +318,9 @@ body {
 .form__submit::before {
   content: '';
   position: relative;
-  /* left: 10px; */
   right: 10px;
   width: 60%;
   height: 10px;
-
-  /* top: 20px; */
 
   background-color: #ffffff;
   transform: rotate(45deg);
@@ -319,8 +334,6 @@ body {
   width: 60%;
   height: 10px;
 
-  /* top: 20px; */
-
   background-color: #ffffff;
   transform: rotate(-45deg);
 }
@@ -330,41 +343,3 @@ body {
 .footer__copyright {
   text-transform: uppercase;
 }
-
-/* .wrap:nth-child(2n - 3) {
-  background-color: #00d089;
-} */
-
-/* .container {
-    display: flex;
-    height: 500px;
-    max-width: 1000px;
-
-    flex-wrap: wrap;
-
-    margin: 0 auto;
-    background-color: #333;
-}
-
-.box {
-    flex-grow: 1;
-    height: 300px;
-    margin: 10px;
-    background-color: #eee;
-}
-
-.container-wrap .box {
-    flex: 1;
-}
-
-.box-1 {
-    flex-grow: 1;
-}
-
-.box-2 {
-    flex-grow: 2;
-}
-
-.box-3 {
-    flex-grow: 3;
-} */
