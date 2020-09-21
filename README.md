@@ -1,5 +1,7 @@
 # Домашнее задание к уроку 6
 
+https://dariaazanovich.github.io/black-sea/.
+
 ### Верстаем макет.
 
 ***
