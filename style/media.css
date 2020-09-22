@@ -7,11 +7,11 @@
     position: relative;
   }
 
-  .header__nav-icon {
+  .header__burger-menu {
     display: flex;
   }
 
-  .header__nav-icon::before {
+  .header__burger-menu::before {
     content: '';
     position: absolute;
     top: 10px;
@@ -21,7 +21,7 @@
     background-color: #ffffff;
   }
 
-  .header__nav-icon::after {
+  .header__burger-menu::after {
     content: '';
     position: absolute;
     top: -10px;
@@ -31,30 +31,69 @@
     background-color: #ffffff;
   }
 
-  .promo__item {
-    height: 4px;
-    width: 4px;
+  .form {
+    padding: 55px 60px 25px;
   }
 }
 
-@media (.header__nav-icon: hover) {
-  .header__nav-icon.header__nav-icon-active {
+@media (.header__burger-menu: hover) {
+  .header__burger-menu.header__burger-menu-active {
     background-color: transparent;
   }
 
-  .header__nav-icon.header__nav-icon-active::before {
+  .header__burger-menu.header__burger-menu-active::before {
     transform: rotate(45deg);
     top: 0;
   }
 
-  .header__nav-icon.header__nav-icon-active::after {
+  .header__burger-menu.header__burger-menu-active::after {
     transform: rotate(-45deg);
   }
 
 }
 
-@media screen and (max-width: 1280px) {
- .header__title {
+@media  (min-width: 1280px) {
+ .header__logo {
+   font-size: 40px;
+ }
+
+ .header__link {
+   font-size: 25px;
+ }
+
+ .promo__title {
    font-size: 44px;
  }
+
+ .promo__btn {
+   font-size: 30px;
+ }
+
+ .promo__item {
+   height: 9px;
+   width: 9px;
+ }
+
+ .main h3 {
+    font-size: 40px;
+ }
+
+ .main p {
+    font-size: 30px;
+ }
+
+ .testimonial__avatar::before {
+   font-size: 30px;
+ }
+
+ .testimonial__review {
+    font-size: 30px;
+ }
+}
+
+@media (max-width: 320px) {
+  .form__user-message {
+    width: 180px;
+    margin-bottom: 10px;
+  }
 }
