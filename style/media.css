@@ -91,6 +91,14 @@
  }
 }
 
+.header {
+  padding: 20px 0;
+}
+
+.footer {
+  padding: 5px 0;
+}
+
 @media (max-width: 320px) {
   .form__user-message {
     width: 180px;
