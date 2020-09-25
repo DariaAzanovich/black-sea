@@ -96,6 +96,41 @@ body {
   cursor: pointer;
 }
 
+
+.header__burger-menu::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  width: 30px;
+  height: 5px;
+
+  background-color: #ffffff;
+}
+
+.header__burger-menu::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  width: 30px;
+  height: 5px;
+
+  background-color: #ffffff;
+}
+
+.header__burger-menu.header__burger-menu-active {
+  background-color: transparent;
+}
+
+.header__burger-menu.header__burger-menu-active::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.header__burger-menu.header__burger-menu-active::after {
+  transform: rotate(-45deg);
+}
+
+
 .header__link + .header__link::before {
   content: '';
   position: absolute;
