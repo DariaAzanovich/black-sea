@@ -3,53 +3,13 @@
     display: none;
   }
 
-  .header__nav {
-    position: relative;
-  }
-
   .header__burger-menu {
     display: flex;
-  }
-
-  .header__burger-menu::before {
-    content: '';
-    position: absolute;
-    top: 10px;
-    width: 30px;
-    height: 5px;
-
-    background-color: #ffffff;
-  }
-
-  .header__burger-menu::after {
-    content: '';
-    position: absolute;
-    top: -10px;
-    width: 30px;
-    height: 5px;
-
-    background-color: #ffffff;
   }
 
   .form {
     padding: 55px 60px 25px;
   }
-}
-
-@media (.header__burger-menu: hover) {
-  .header__burger-menu.header__burger-menu-active {
-    background-color: transparent;
-  }
-
-  .header__burger-menu.header__burger-menu-active::before {
-    transform: rotate(45deg);
-    top: 0;
-  }
-
-  .header__burger-menu.header__burger-menu-active::after {
-    transform: rotate(-45deg);
-  }
-
 }
 
 @media  (min-width: 1280px) {
@@ -79,7 +39,7 @@
  }
 
  .main p {
-    font-size: 30px;
+    font-size: 25px;
  }
 
  .testimonial__avatar::before {
